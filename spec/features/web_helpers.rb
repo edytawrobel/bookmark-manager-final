@@ -35,3 +35,11 @@ def no_email
   fill_in :password_confirmation, with: 'oranges!'
   click_button 'Sign up'
 end
+
+def wrong_email_format
+  visit '/users/new'
+  fill_in :email,    with: 'aliceexample.com'
+  fill_in :password, with: 'oranges!'
+  fill_in :password_confirmation, with: 'oranges!'
+  click_button 'Sign up'
+end

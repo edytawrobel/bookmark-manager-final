@@ -17,7 +17,12 @@ feature 'User sign up' do
     no_email
     expect { no_email }.not_to change(User, :count)
     expect(current_path).to eq('/users')
+  end
 
+  scenario 'malformed email does not alllow sign up' do
+    wrong_email_format
+    expect { wrong_email_format }.not_to change(User, :count)
+    expect(current_path).to eq('/users')
   end
 
 end
