@@ -43,3 +43,8 @@ def wrong_email_format
   fill_in :password_confirmation, with: 'oranges!'
   click_button 'Sign up'
 end
+
+def sign_up_with_same_address
+  sign_up
+  sign_up
+end
