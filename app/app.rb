@@ -24,7 +24,6 @@ class BookmarkManager < Sinatra::Base
 
   post '/links' do
     link = Link.create(title: params[:title], url: params[:url])
-    # tag = Tag.first_or_create(tags: params[:tags])
     tag = params[:tags]
     tag.split(", ").each do |tag|
       new_tag = Tag.create(tags: tag)
@@ -58,14 +57,6 @@ class BookmarkManager < Sinatra::Base
       flash.now[:notices] = @user.errors.full_messages
       erb :'users/new'
     end
-    # if params[:password] == params[:password_confirmation]
-    #   user = User.create(email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
-    #   session[:user_id] = user.id
-    #   redirect to('/links')
-    # else
-    #   flash.now[:notice] = 'Password and confirmation password do not match'
-    #   erb :'users/new'
-    # end
   end
 
   helpers do

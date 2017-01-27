@@ -12,8 +12,8 @@
     <% end %>
 
     <% if flash[:notices] && !flash[:notices].empty? %>
-      <% flash[:notices].each do |n| %>
-       <div> <%= n %> </div>
+      <% flash[:notices].each do |notice| %>
+       <div> <%= notice %> </div>
        <% end %>
     <% end %>
 
