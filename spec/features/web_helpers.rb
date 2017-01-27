@@ -28,3 +28,10 @@ def wrong_sign_up
   fill_in :password_confirmation, with: 'wrong'
   click_button 'Sign up'
 end
+
+def no_email
+  visit '/users/new'
+  fill_in :password, with: 'oranges!'
+  fill_in :password_confirmation, with: 'oranges!'
+  click_button 'Sign up'
+end
