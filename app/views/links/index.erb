@@ -1,0 +1,12 @@
+<h1> Links </h1>
+<ul id='links'>
+  <% @links.each do |link| %>
+    <li>
+      URL:    <%= link.url %>
+      TITLE:  <%= link.title %>
+      TAG     <%= link.tags.map(&:tags) %>
+    </li>
+  <% end %>
+  <form action = "links/new" method = "get"> <input type = "submit" value = "Add a new link"> </form>
+  <form action = "/tags" method = "get"> <input type = "submit" value = "Filter tags"> </form>
+</ul>

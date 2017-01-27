@@ -1,0 +1,12 @@
+<h1> Your filtered links are: </h1>
+<ul id='links'>
+  <% @links.each do |link| %>
+  <% if link.tags.map(&:tags).include? "#{@search}"  %>
+    <li>
+      URL:    <%= link.url %>
+      TITLE:  <%= link.title %>
+      TAG     <%= link.tags.map(&:tags) %>
+    </li>
+  <% end %>
+  <% end %>
+</ul>

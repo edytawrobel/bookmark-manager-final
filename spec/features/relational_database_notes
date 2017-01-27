@@ -1,0 +1,31 @@
+What is a relational database?
+
+A relational database is a digital database whose organisation is based on the data of a relational model.
+
+What is a relational model?
+
+A relational model organises data into one or more tables (relations) of collumns and rows, each with its own unique key identifying each row
+Rows are commonly referd to as records or tuples.  Generally each table/relation represents one entity type such as "John" or "Chair" and the
+collumns representing values attributed to that instance such as address or price.
+
+
+What are keys?
+
+Each row in a table has its own unique key. Foreign keys are other columns linked by these unique keys.
+
+Primary Key - PK
+Alternate Key - AK
+
+Primary keys are used within a database to define the relationships among tables. When a PK migrates to another table, it becomes a foreign key in the other table.
+
+
+Relationships are a logical connection between different tables, established on the basis of interaction among these tables.
+
+
+SQL term            Relational database term          Description
+Row                 Tuple or record                   A data set representing a single item
+Column              Attribute or field                A labeled element or tuple, e.g. "Address" or "Date of birth"
+Table               Relation or base relvar           A set of tuples sharing the same attributes; a set of columns and rows
+View or result set  Derived relvar                    Any set of tuples; a data report from the RDBMS in response to a query
+
+Relations can be modified by insert, delete and update operators

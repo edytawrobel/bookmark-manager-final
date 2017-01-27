@@ -1,0 +1,65 @@
+User stories - Week 4.  Bookmark challenge
+
+- It shows a list of links from the database
+- New links can be added
+- Links can be tagged
+- Links can be filtered by a tag
+
+
+User Story 1:
+
+As a time-pressed user
+So that I can quickly go to web sites I regularly visit
+I would like to see a list of links on the homepage
+
+User Story 2:
+
+As a time-pressed user
+So that I can save a website
+I would like to add the site's address and title to my bookmark manager
+
+User Story 3:
+
+As a time-pressed user,
+So that I can easily categorise the bookmarks,
+I want to be able to tag my links.
+
+User Story 4:
+
+As a time-pressed user,
+So that I can arrange my tagged bookmarks,
+I want to be able to filter my bookmarks according to tags.
+
+
+Walkthrough story:
+
+As a time-pressed user
+So that I can quickly find web sites I recently bookmarked
+I would like to see links in descending chronological order
+
+
+------------------
+What is a CRUD cycle?
+
+The CRUD cycle describes the elemental functions of a persistent database.
+CRUD stands for Create, Read, Update, Delete.  These functions are also descriptive of the data life cycle.
+
+Different users may have different CRUD cycles based upon the requirements of the system.
+A customer for instance might have the ability to create an account, retrieve it and upon return to a website,
+update billing information or delete it if necessary.
+
+----------------
+What is SQL?
+
+SQL stands for Structured Query Language.  It is a standardised programming language used for managing relational databases
+and performing various operations on the data in them. The uses of SQL include modifying database table and index structures,
+adding updating and deleting rows of data; and retrieving subsets of information from within a database for transaction processing
+and analytics applications.
+
+-------------------
+SQL examples of CRUD:
+
+Create    -      CREATE INDEX ON
+Read      -      SELECT FROM
+Update    -      UPDATE SET
+Delete    -      DELETE FROM
