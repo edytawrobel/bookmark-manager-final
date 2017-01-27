@@ -7,6 +7,7 @@ require_relative 'data_mapper_setup'
 class BookmarkManager < Sinatra::Base
   enable :sessions
   register Sinatra::Flash
+  use Rack::MethodOverride
   set :session_secret, 'super secret'
 
   get '/' do
@@ -64,14 +65,20 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/sessions' do
-    user = User.authenticate(params[:email], params[:password])
-    if user
-      session[:user_id] = user.id
+    @user = User.authenticate(params[:email], params[:password])
+    if @user
+      session[:user_id] = @user.id
       redirect to('/links')
     else
       flash.now[:errors] = ['The email or password is incorrect']
       erb :'sessions/new'
     end
+  end
+
+  delete '/sessions' do
+    session[:user_id] = nil
+    flash.keep[:notice] = "See you soon!"  #keep persists the flash notice over the redirect
+    redirect to('/links')
   end
 
   helpers do
